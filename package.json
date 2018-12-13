@@ -1,0 +1,28 @@
+{
+  "name": "frontend-exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dextreeamper/frontend-exam.git"
+  },
+  "author": "dexter amper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dextreeamper/frontend-exam/issues"
+  },
+  "homepage": "https://github.com/dextreeamper/frontend-exam#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-sass": "^3.2.1",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "gulp-watch": "^5.0.1"
+  }
+}

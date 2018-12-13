@@ -4,6 +4,7 @@ $gray: #7d8389 !default;
 $white: #fff !default;
 $yellow: #fbd243 !default;
 $black: #333 !default;
+$green: #4ca346 !default;
 
 @font-face {
   font-family: Gotham-Light;
@@ -34,17 +35,54 @@ p {
 }
 
 .container {
-  width: 950px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.fa-check {
+  font-weight: bold;
+  color: $green;
+  padding-right: 5px;
+}
+
+.fa-circle {
+  font-size: 8px;
+  color: $gray;
+}
+
+.h-logo {
+  width: 250px;
+  height: 60px;
+}
+
+.step-num {
+  background-color: orange;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 10px 0px;
+  font-weight: bold;
+  font-family: Gotham-Medium !important;
+  font-size: 12px !important;
+  position: absolute;
+  top: 43px;
+  left: 10px;
+}
+
 .input-div {
   margin-top: 2em;
+  position: relative;
   span {
     display: block;
     font-family: Gotham-Medium;
     font-size: 18px;
+    color: $white;
+  }
+  a {
+    text-decoration: none;
     color: $white;
   }
 }
@@ -66,13 +104,8 @@ p {
     top: -20px;
     font-family: Gotham-Medium;
   }
-  .h-logo {
-    width: 250px;
-    height: 60px;
-  }
   .lm-services {
     float: right;
-    // display: inline-block;
     span {
       display: block;
       color: $black;
@@ -85,6 +118,7 @@ p {
 }
 
 .first-section {
+  height: 550px;
   padding-top: 30px;
   padding-bottom: 60px;
   background-color: $primary;
@@ -94,11 +128,13 @@ p {
     $primary-100,
     $primary-100
   );
+
   .heading {
     font-family: "Gotham-Light", sans-serif;
     font-weight: 100;
     font-size: 40px;
     color: $white;
+    line-height: 45px;
     span {
       font-family: "Gotham-Medium", sans-serif;
       font-size: 32px;
@@ -107,20 +143,30 @@ p {
   }
   form,
   .review-div {
-    width: 50%;
+    width: 45%;
   }
   form {
     float: left;
-    input {
+    .placeholder-hide {
+      display: none;
+    }
+    input,
+    select {
+      margin-top: 10px;
       border-radius: 50px;
       width: 100%;
       text-align: left;
-      font-size: 14px;
+      font-size: 15px;
       font-family: Gotham-Medium;
       font-weight: 100;
       color: #4e555c;
-      padding: 15px 20px;
+      // padding: 20px 25px;
+      padding: 20px 25px 20px 60px;
       border: none;
+      outline: none;
+      &:focus {
+        box-shadow: 1pt 0 3pt 3pt $primary-100;
+      }
     }
     span {
       color: $white;
@@ -128,7 +174,12 @@ p {
     }
   }
   .review-div {
-    display: inline-block;
+    margin-left: auto;
+    float: right;
+    .fa-star {
+      font-size: 13px;
+      color: #eaa40d;
+    }
     .review-heading {
       font-family: Gotham-Book;
       font-size: 18px;
@@ -138,26 +189,148 @@ p {
     .r-card {
       color: $white;
       font-family: Gotham-Book;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14901960784313725);
+      padding-bottom: 10px;
+      padding-top: 10px;
       span {
         display: block;
       }
-      .r-profile,
-      .r-body {
-        display: inline-block;
-      }
-      .r-profile > span,
-      .r-title {
+    }
+    .r-card:last-child {
+      border-bottom: none;
+    }
+    .r-profile {
+      float: left;
+      display: block;
+      text-align: center;
+      margin-right: 3%;
+    }
+    .r-profile > span,
+    .r-title {
+      font-size: 13px;
+      font-family: Gotham-Medium;
+    }
+    .r-desc {
+      font-size: 13px;
+      font-style: italic;
+      margin-top: 10px;
+    }
+    .r-url {
+      text-align: right;
+      a {
+        text-decoration: none;
+        color: $yellow;
         font-size: 13px;
       }
-      .r-ratings {
-        font-size: 11px;
-        font-style: italic;
-        a {
-          color: $yellow;
-          font-style: normal;
-          text-decoration: none;
-        }
+    }
+    .r-ratings {
+      font-size: 11px;
+      font-style: italic;
+      margin-top: 10px;
+      a {
+        color: $yellow;
+        font-style: normal;
+        text-decoration: none;
       }
     }
   }
+}
+
+footer {
+  .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 200px;
+  }
+  .col-3:first-child {
+    width: 25%;
+    float: left;
+  }
+  .col-3:nth-child(2) {
+    text-align: center;
+    float: left;
+    width: 50%;
+  }
+  .col-3:last-child {
+    float: right;
+    width: 20%;
+    img {
+      display: block;
+      width: 100%;
+      max-width: 150px;
+    }
+    img:first-child {
+      margin-bottom: 20px;
+    }
+  }
+  .footer-nav {
+    font-family: Gotham-Medium;
+    margin: 20px 20px 40px;
+    padding: 0;
+    li {
+      list-style-type: none;
+      display: inline-block;
+      padding: 0 15px;
+    }
+    a {
+      text-decoration: none;
+      color: $gray;
+    }
+  }
+  .lm-property {
+    font-family: Gotham-Book;
+    font-size: 13px;
+    color: $gray;
+  }
+}
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: $white;
+  background-image: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: $white;
+  overflow: hidden;
+  border-radius: 0.25em;
+  ::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    background: $gray;
+    pointer-events: none;
+    -webkit-transition: 0.25s all ease;
+    -o-transition: 0.25s all ease;
+    transition: 0.25s all ease;
+  }
+  &:hover::after {
+    color: #f39c12;
+  }
+  ::-ms-expand {
+    display: none;
+  }
+}
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 0.5em;
+  color: #fff;
+  cursor: pointer;
 }

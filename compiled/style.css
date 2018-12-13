@@ -24,16 +24,48 @@ p {
   line-height: 2em; }
 
 .container {
-  width: 950px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto; }
 
+.fa-check {
+  font-weight: bold;
+  color: #4ca346;
+  padding-right: 5px; }
+
+.fa-circle {
+  font-size: 8px;
+  color: #7d8389; }
+
+.h-logo {
+  width: 250px;
+  height: 60px; }
+
+.step-num {
+  background-color: orange;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 10px 0px;
+  font-weight: bold;
+  font-family: Gotham-Medium !important;
+  font-size: 12px !important;
+  position: absolute;
+  top: 43px;
+  left: 10px; }
+
 .input-div {
-  margin-top: 2em; }
+  margin-top: 2em;
+  position: relative; }
   .input-div span {
     display: block;
     font-family: Gotham-Medium;
     font-size: 18px;
+    color: #fff; }
+  .input-div a {
+    text-decoration: none;
     color: #fff; }
 
 .input-div:last-child {
@@ -50,9 +82,6 @@ p {
     position: relative;
     top: -20px;
     font-family: Gotham-Medium; }
-  .navbar .h-logo {
-    width: 250px;
-    height: 60px; }
   .navbar .lm-services {
     float: right; }
     .navbar .lm-services span {
@@ -64,6 +93,7 @@ p {
       line-height: 20px; }
 
 .first-section {
+  height: 550px;
   padding-top: 30px;
   padding-bottom: 60px;
   background-color: #032d6b;
@@ -72,31 +102,44 @@ p {
     font-family: "Gotham-Light", sans-serif;
     font-weight: 100;
     font-size: 40px;
-    color: #fff; }
+    color: #fff;
+    line-height: 45px; }
     .first-section .heading span {
       font-family: "Gotham-Medium", sans-serif;
       font-size: 32px;
       display: block; }
   .first-section form,
   .first-section .review-div {
-    width: 50%; }
+    width: 45%; }
   .first-section form {
     float: left; }
-    .first-section form input {
+    .first-section form .placeholder-hide {
+      display: none; }
+    .first-section form input,
+    .first-section form select {
+      margin-top: 10px;
       border-radius: 50px;
       width: 100%;
       text-align: left;
-      font-size: 14px;
+      font-size: 15px;
       font-family: Gotham-Medium;
       font-weight: 100;
       color: #4e555c;
-      padding: 15px 20px;
-      border: none; }
+      padding: 20px 25px 20px 60px;
+      border: none;
+      outline: none; }
+      .first-section form input:focus,
+      .first-section form select:focus {
+        box-shadow: 1pt 0 3pt 3pt #126fac; }
     .first-section form span {
       color: #fff;
       font-family: Gotham-Book; }
   .first-section .review-div {
-    display: inline-block; }
+    margin-left: auto;
+    float: right; }
+    .first-section .review-div .fa-star {
+      font-size: 13px;
+      color: #eaa40d; }
     .first-section .review-div .review-heading {
       font-family: Gotham-Book;
       font-size: 18px;
@@ -104,19 +147,126 @@ p {
       color: #fff; }
     .first-section .review-div .r-card {
       color: #fff;
-      font-family: Gotham-Book; }
+      font-family: Gotham-Book;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14902);
+      padding-bottom: 10px;
+      padding-top: 10px; }
       .first-section .review-div .r-card span {
         display: block; }
-      .first-section .review-div .r-card .r-profile,
-      .first-section .review-div .r-card .r-body {
-        display: inline-block; }
-      .first-section .review-div .r-card .r-profile > span,
-      .first-section .review-div .r-card .r-title {
+    .first-section .review-div .r-card:last-child {
+      border-bottom: none; }
+    .first-section .review-div .r-profile {
+      float: left;
+      display: block;
+      text-align: center;
+      margin-right: 3%; }
+    .first-section .review-div .r-profile > span,
+    .first-section .review-div .r-title {
+      font-size: 13px;
+      font-family: Gotham-Medium; }
+    .first-section .review-div .r-desc {
+      font-size: 13px;
+      font-style: italic;
+      margin-top: 10px; }
+    .first-section .review-div .r-url {
+      text-align: right; }
+      .first-section .review-div .r-url a {
+        text-decoration: none;
+        color: #fbd243;
         font-size: 13px; }
-      .first-section .review-div .r-card .r-ratings {
-        font-size: 11px;
-        font-style: italic; }
-        .first-section .review-div .r-card .r-ratings a {
-          color: #fbd243;
-          font-style: normal;
-          text-decoration: none; }
+    .first-section .review-div .r-ratings {
+      font-size: 11px;
+      font-style: italic;
+      margin-top: 10px; }
+      .first-section .review-div .r-ratings a {
+        color: #fbd243;
+        font-style: normal;
+        text-decoration: none; }
+
+footer .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 200px; }
+
+footer .col-3:first-child {
+  width: 25%;
+  float: left; }
+
+footer .col-3:nth-child(2) {
+  text-align: center;
+  float: left;
+  width: 50%; }
+
+footer .col-3:last-child {
+  float: right;
+  width: 20%; }
+  footer .col-3:last-child img {
+    display: block;
+    width: 100%;
+    max-width: 150px; }
+  footer .col-3:last-child img:first-child {
+    margin-bottom: 20px; }
+
+footer .footer-nav {
+  font-family: Gotham-Medium;
+  margin: 20px 20px 40px;
+  padding: 0; }
+  footer .footer-nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 15px; }
+  footer .footer-nav a {
+    text-decoration: none;
+    color: #7d8389; }
+
+footer .lm-property {
+  font-family: Gotham-Book;
+  font-size: 13px;
+  color: #7d8389; }
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #fff;
+  background-image: none; }
+
+/* Custom Select */
+.select {
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 0.25em; }
+  .select ::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    background: #7d8389;
+    pointer-events: none;
+    -webkit-transition: 0.25s all ease;
+    -o-transition: 0.25s all ease;
+    transition: 0.25s all ease; }
+  .select:hover::after {
+    color: #f39c12; }
+  .select ::-ms-expand {
+    display: none; }
+
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 0.5em;
+  color: #fff;
+  cursor: pointer; }

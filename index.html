@@ -2,18 +2,35 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="compiled/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
       <div class="navbar">
         <div class="container">
-          <a href="#"><img class="h-logo" src="images/logo_2.svg" alt="LegalMatch" scale="0"></a>
-          <span class="tagline"><strong>FIND THE RIGHT LAWYER NOW</strong></span>
+          <a href="#"
+            ><img
+              class="h-logo"
+              src="images/logo_2.svg"
+              alt="LegalMatch"
+              scale="0"
+          /></a>
+          <span class="tagline"
+            ><strong>FIND THE RIGHT LAWYER NOW</strong></span
+          >
           <div class="lm-services">
-            <span>No fee to present your case</span>
-            <span>Choose from lawyers in your area</span>
-            <span>A 100% confidential service</span>
+            <span><i class="fas fa-check"></i>No fee to present your case</span>
+            <span
+              ><i class="fas fa-check"></i>Choose from lawyers in your
+              area</span
+            >
+            <span><i class="fas fa-check"></i>A 100% confidential service</span>
           </div>
         </div>
       </div>
@@ -28,20 +45,37 @@
           <form action="">
             <div class="input-div">
               <span>Enter Zip Code or City:</span>
+              <span class="step-num">1</span>
               <input
                 type="text"
                 placeholder="Does not have to be where you live"
               />
             </div>
             <div class="input-div">
-              <span>Choose a category:</span>
-              <input
-                type="text"
-                placeholder="Click to choose a legal category"
-              />
+              <span>Choose a category:</span> <span class="step-num">2</span>
+              <select
+                name="category"
+                class="legal-category"
+                tabindex="20"
+                aria-required="true"
+                aria-invalid="false"
+                ><option
+                  value="Click to choose a legal category"
+                  selected="selected"
+                  class="placeholder-hide"
+                  >Click to choose a legal category</option
+                ><option value="Family">Family</option
+                ><option value="Criminal Defense">Criminal Defense</option>
+                <option value="Business">Business</option>
+                <option value="Bankruptcy & Finances"
+                  >Bankruptcy & Services</option
+                >
+                <option value="Product & Services">Product & Services</option>
+                <option value="Employment">Employment</option>
+              </select>
             </div>
             <div class="input-div">
-                <span>Can’t find your category? Click here.</span>
+              <span>Can’t find your category? <a href="#">Click here</a>.</span>
             </div>
           </form>
           <div class="review-div">
@@ -53,11 +87,61 @@
                 <span class="r-address">Cherry Hill, NJ</span>
               </div>
               <div class="r-body">
-                <span class="r-title">Family Law</span> 
-                <span class="r-ratings" ratings</span>
-                <span>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ... dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip” </span>
-                <a href="Read Review">Read Review</a>
+                <span class="r-title"
+                  >Family Law <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                </span>
+                <span class="r-desc"
+                  >“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et ... dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip”
+                </span>
               </div>
+              <div class="r-url"><a href="#">Read review</a></div>
+            </div>
+            <div class="r-card">
+              <div class="r-profile">
+                <img class="" src="images/mitchell-m.png" alt="profile" />
+                <span class="r-name">Mitchell M.</span>
+                <span class="r-address">Cherry Hill, NJ</span>
+              </div>
+              <div class="r-body">
+                <span class="r-title"
+                  >Family Law <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                </span>
+                <span class="r-desc"
+                  >“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et ... dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip”
+                </span>
+              </div>
+              <div class="r-url"><a href="#">Read review</a></div>
+            </div>
+            <div class="r-card">
+              <div class="r-profile">
+                <img class="" src="images/mitchell-m.png" alt="profile" />
+                <span class="r-name">Mitchell M.</span>
+                <span class="r-address">Cherry Hill, NJ</span>
+              </div>
+              <div class="r-body">
+                <span class="r-title"
+                  >Family Law <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                </span>
+                <span class="r-desc"
+                  >“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et ... dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip”
+                </span>
+              </div>
+              <div class="r-url"><a href="#">Read review</a></div>
             </div>
           </div>
         </div>
@@ -66,22 +150,33 @@
     <footer>
       <div class="container">
         <div class="col-3">
-          <a href="#"><img src="#" alt="Logo"></a>
-          <span><strong>FIND THE RIGHT LAWYER</strong></span>
+          <a href="#"
+            ><img
+              class="h-logo"
+              src="images/logo_2.svg"
+              alt="LegalMatch"
+              scale="0"
+          /></a>
         </div>
         <div class="col-3">
           <ul class="footer-nav">
             <li><a href="#">User Agreement</a></li>
+            <i class="fas fa-circle"></i>
             <li><a href="#">Privacy Policy</a></li>
+            <i class="fas fa-circle"></i>
             <li><a href="#">Site Map</a></li>
           </ul>
           <div class="lm-property">
-            <span>Copyright 1999-2016 LegalMatch. All rights reserved. LegalMatch®, the LegalMatch logo, and the tradedress are trademarks of LegalMatch. Patents Pending.</span>
+            <span
+              >Copyright 1999-2016 LegalMatch. All rights reserved. LegalMatch®,
+              the LegalMatch logo, and the tradedress are trademarks of
+              LegalMatch. Patents Pending.</span
+            >
           </div>
         </div>
         <div class="col-3">
-          <img src="#" alt="Truste Verified">
-          <img src="#" alt="Accredited Business">
+          <img src="images/small-truste.png" alt="Truste Verified" />
+          <img src="images/bbb-accredited.png" alt="Accredited Business" />
         </div>
       </div>
     </footer>

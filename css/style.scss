@@ -1,3 +1,163 @@
-body {
-  background-color: green;
+$primary: #032d6b !default;
+$primary-100: #126fac !default;
+$gray: #7d8389 !default;
+$white: #fff !default;
+$yellow: #fbd243 !default;
+$black: #333 !default;
+
+@font-face {
+  font-family: Gotham-Light;
+  src: url("fonts/Gotham/Gotham-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: Gotham-Medium;
+  src: url("fonts/Gotham/Gotham-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: Gotham-Medium;
+  src: url("fonts/Gotham/Gotham-Book.otf") format("opentype");
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  line-height: 2em;
+}
+
+.container {
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-div {
+  margin-top: 2em;
+  span {
+    display: block;
+    font-family: Gotham-Medium;
+    font-size: 18px;
+    color: $white;
+  }
+}
+
+.input-div:last-child {
+  margin-top: 1em;
+  span {
+    text-align: center;
+  }
+}
+
+.navbar {
+  background-color: $white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .tagline {
+    color: $primary;
+    position: relative;
+    top: -20px;
+    font-family: Gotham-Medium;
+  }
+  .h-logo {
+    width: 250px;
+    height: 60px;
+  }
+  .lm-services {
+    float: right;
+    // display: inline-block;
+    span {
+      display: block;
+      color: $black;
+      display: block;
+      font-family: Gotham-Book;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.first-section {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  background-color: $primary;
+  background-image: linear-gradient(
+    to right,
+    $primary,
+    $primary-100,
+    $primary-100
+  );
+  .heading {
+    font-family: "Gotham-Light", sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    color: $white;
+    span {
+      font-family: "Gotham-Medium", sans-serif;
+      font-size: 32px;
+      display: block;
+    }
+  }
+  form,
+  .review-div {
+    width: 50%;
+  }
+  form {
+    float: left;
+    input {
+      border-radius: 50px;
+      width: 100%;
+      text-align: left;
+      font-size: 14px;
+      font-family: Gotham-Medium;
+      font-weight: 100;
+      color: #4e555c;
+      padding: 15px 20px;
+      border: none;
+    }
+    span {
+      color: $white;
+      font-family: Gotham-Book;
+    }
+  }
+  .review-div {
+    display: inline-block;
+    .review-heading {
+      font-family: Gotham-Book;
+      font-size: 18px;
+      font-weight: 100;
+      color: $white;
+    }
+    .r-card {
+      color: $white;
+      font-family: Gotham-Book;
+      span {
+        display: block;
+      }
+      .r-profile,
+      .r-body {
+        display: inline-block;
+      }
+      .r-profile > span,
+      .r-title {
+        font-size: 13px;
+      }
+      .r-ratings {
+        font-size: 11px;
+        font-style: italic;
+        a {
+          color: $yellow;
+          font-style: normal;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
